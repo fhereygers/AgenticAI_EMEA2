@@ -20,16 +20,10 @@ To review this lab at home with click by click directions please check out our g
 
 # Getting Started
 
-User assignment: 
-
-Instructor will share your user assignment with you before getting started with the hands on lab
+User assignment: Instructor will share your user assignment with you before getting started with the hands on lab
  
-Login Credentials and URL: 
+Login Credentials and URL: Shared ahead of the HoL or during the Session.
 
-Shared ahead of the HoL or during the Session.
-
-
-# Lab 0
 
 # Getting Started
 
