@@ -43,10 +43,6 @@ After login you should see the Cloudera tenant Home Screen. Click on **Cloudera 
 From the earlier step, you were give the workspace. Makes you pick the right workspace.
 Click into the desired workspace. (only 1 for this lab)
 
-<br/>
-<img src="images/1homescreena.png" width="90%">
-<br/>
-
 
 From the earlier step, you were given the workspace. Makes you pick the right workspace.
 
