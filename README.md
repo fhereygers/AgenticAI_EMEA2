@@ -65,7 +65,7 @@ user091 to user120 -> aihol-ml-wb04
 
 
 <br/>
-<img src="./2workspace.png" width="90%">
+<img src="images/2workspace.png" width="90%">
 <br/>
 
 Click **view all projects** and select scope to **My Teams Projects**
