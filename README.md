@@ -49,6 +49,50 @@ After login you should see the Cloudera tenant Home Screen. Click on **Cloudera 
 From the earlier step, you were give the workspace. Makes you pick the right workspace.
 Click into the desired workspace. (only 1 for this lab)
 
+**Step 1**: Login with the shared login URL and that should bring you to below screen as shown in step-2.
+
+**Step 2**: If there are any pop up’s for today’s lab, just dismiss them. You’ll see the following screen. Click on Cloudera AI. 
+
+<br/>
+<img src="images/1homescreena.png" width="90%">
+ <br/>
+
+**Step 3**: From the earlier step, you were given the workspace. Makes you pick the right workspace.
+
+Click into the workspace based on your username. Please, do not select any other workbench as this could disturb the workload management.  
+
+user 001 to user030 -> aihol-ml-wb01
+
+
+user 031 to user060 -> aihol-ml-wb02
+
+
+user061 to user090 -> aihol-ml-wb03
+
+
+user091 to user120 -> aihol-ml-wb04
+
+
+<br/>
+<img src="images/2workspace.png" width="90%">
+<br/>
+
+Click **view all projects** and select scope to **My Teams Projects**
+
+<br/>
+<img src="images/3ahomescreen.png" width="90%">
+<br/>
+
+<br/>
+<img src="images/3bmyteam.png" width="90%">
+<br/>
+You will see your project. Click into it. 
+
+
+<br/>
+<img src="images/3cproject.png" width="90%">
+<br/>
+
 ![Cloudera AI Homepage](./cloudera_ai_home_page_workbench_selection.png)
 
 You will see your assigned Cloudera AI project. Click on the project name to open it.
