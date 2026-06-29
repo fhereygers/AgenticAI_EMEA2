@@ -47,6 +47,11 @@ Click into the desired workspace. (only 1 for this lab)
 
 **Step 2**: If there are any pop up’s for today’s lab, just dismiss them. You’ll see the following screen. Click on Cloudera AI. 
 
+
+![Home screen](./1homescreena.png)
+
+
+
 <br/>
 <img src="./1homescreena.png" width="90%">
  <br/>
