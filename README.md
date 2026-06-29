@@ -78,9 +78,13 @@ user091 to user120 -> aihol-ml-wb04
 
 Click **view all projects** and select scope to **My Teams Projects**
 
+
 <br/>
-<img src="./3ahomescreen.png" width="90%">
+<img src="images/3ahomescreen.png" width="90%">
 <br/>
+
+
+
 
 <br/>
 <img src="./3bmyteam.png" width="90%">
