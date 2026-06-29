@@ -20,13 +20,6 @@ To review this lab at home with click by click directions please check out our g
 
 # Getting Started
 
-User assignment: Instructor will share your user assignment with you before getting started with the hands on lab
- 
-Login Credentials and URL: Shared ahead of the HoL or during the Session.
-
-
-# Getting Started
-
 **Goals**
 
 - [ ] Login to Cloudera Control Plane
