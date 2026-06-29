@@ -548,6 +548,166 @@ Input the specific credentials provided by your instructor
 
 # Lab 4
 
-# Lab 5
+# Lab 4 - Chat with Cloudera
+
+In this final lab, you will build a multi-agent team that bridges the gap between raw data and professional reporting by integrating **Cloudera Data Warehouse** via the **Cloudera Iceberg MCP server**. By orchestrating specialized agents to inspect schemas, execute SQL queries via Apache Impala, and synthesize findings into polished documents, you'll master the full lifecycle of data-driven agentic workflows.
+
+**Goals**
+
+- [ ] Build collaborative multi-agent workflows.
+- [ ] Use an MCP server to connect agents to Cloudera Data Warehouse.
+- [ ] Query data via Apache Impala and generate PDF reports.
+
+## Requirements
+
+You must be logged into your assigned Cloudera AI project with the Agent Studio application launched. See [Lab 0 - Getting Started](../lab0/README.md) for setup instructions.
+
+Your instructor will provide you with connection details to connect to Cloudera Data Warehouse service.
+
+## Step-by-Step Guide
+
+### Step 1: Register the Iceberg MCP Server
+
+* Navigate to the Agent Studio for your assigned lab.
+
+* On the Agent Studio home page, click `Tools Catalog` on the top navigation.
+
+![Open Tools Catalog](./step1-open-tools-catalog.png)
+
+* Click on the `MCP Servers` tab and then click `Register` to add a new MCP Server.
+
+![Register MCP Server Page](./step1-register-mcp-server-page.png)
+
+* In the **MCP Server Configuration** textarea, delete the placeholder text and paste the below configuration to register the [Cloudera Iceberg MCP Server](https://github.com/cloudera/iceberg-mcp-server?tab=readme-ov-file#option-1-direct-installation-from-github-recommended){target="_blank"}. Then click `Register`.
+
+```json
+{
+  "mcpServers": {
+    "iceberg-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/cloudera/iceberg-mcp-server@main",
+        "run-server"
+      ],
+      "env": {
+        "IMPALA_HOST": "coordinator-default-impala.example.com",
+        "IMPALA_PORT": "443",
+        "IMPALA_USER": "username",
+        "IMPALA_PASSWORD": "password",
+        "IMPALA_DATABASE": "default"
+      }
+    }
+  }
+}
+```
+
+!!! note
+    You do not need to fill the credential placeholders at this point. We will do that during the Agent Workflow configuration.
+
+![Cloudera MCP Server Configuration](./step1-cloudera-mcp-config.png)
+
+* Wait a few moment to allow verification of the Cloudera MCP server to complete (if it fails initially, try once more). 
+
+![Verify MCP Server](./step1-cloudera-mcp-registered.png)
+
+### Step 2: Create a Workflow from the Lab 4 Template
+
+* Click `Agentic Workflows`  in the top navigation pane to return to the Agent Studio home page.
+
+* On the Agent Studio home page, go to the **Workflow templates** area and click `View All`.
+
+* Select the `Lab4: ChatWithCloudera` template to create a draft workflow.
+
+![Select Lab 4 Workflow Template](./step2-select-workflow-template.png)
+
+* This will generate a draft workflow from the template as your starting point. 
+
+### Step 3: Enable Conversational Dialogue and Manager Agent
+
+* On the **Add Agents** screen, toggle on **Is Conversational**. This enables a chat interface that retains prior messages as context, allowing for iterative problem solving.
+
+* Toggle on the **Manager Agent** setting, which will oversee the workflow and delegate tasks between your specialized agents. 
+
+![Edit Agent](./step3-edit-agent-workflow-config.png)
+
+### Step 4: Attach the MCP Server to the Query Specialist
+
+* Locate the **Data Warehouse Query Specialist** agent and click edit.
+
+![Edit Agent](./step4-edit-dw-agent.png)
+
+* In the agent editing dialog, click the `Add MCP Server to Agent` button.
+
+* Click the `iceberg-mcp-server` to attach it to the Agent. Then click `Add MCP Server to Agent`.
+
+![Add Iceberg MCP Server to Agent](./step4-add-iceberg-mcp-server-to-agent.png)
+
+* Close the **Add or Edit MCPs** dialog.
+
+* Click `Save Agent` button. Then Close the **Create or Edit Agent** dialog.
+
+* Click `Save & Next` on the Add Agents menu.
+
+![Save Agent Updates](./step4-save-and-next-add-agent.png)
+
+### Step 5: Review Task and Configuration
+
+* No changes are needed in the task configuration screen. Click `Save & Next` to proceed.
+
+![Save Tasks](./step5-save-tasks.png)
+
+### Step 6: Configure Impala Connection Details
+
+* Proceed to the configuration screen where you will be prompted for Impala connection details.
+
+* Input the details for the Cloudera Data Warehouse provided by your instructor:
+
+   * Impala host: (Enter the coordinator host URL provided)
+   * Impala port: `443`
+   * Impala user: (Your assigned username)
+   * Impala password: (Your assigned password)
+   * Database: `default`
+
+* Click `Save & Next`. 
+
+![Agent Configuration](./step6-configure-connection.png)
+
+### Step 7: Test Workflow - Database Schema Exploration
+
+* In the chat composer UI, enter your first test prompt: 
+
+```text title="Database Schema Exploration Prompt"
+What sort of data do you have?
+```
+
+* Watch the execution flow as the data warehouse query specialist interrogates the schema and discovers the users and transactions tables.
+
+* Observe the manager agent providing you with a synthesized summary of the database contents. 
+
+![Database Schema Prompt Test Output](./step7-test-output.png)
+
+### Step 8: Test Workflow - Complex Query and Report Generation
+
+* Enter a second prompt to engage the full multi-agent team: 
+
+```text title="Query and Report Generation Prompt"
+Create a report of the biggest transactions for the top 10 oldest users. Include the transaction amount, the user id, user gender, and the merchant city. Create a PDF with the report using your tools.
+```
+
+* Observe the data warehouse query specialist automatically linking the tables, generating the SQL, and modifying the query if it encounters an initial issue.
+
+* Watch the workflow hand off the retrieved data to the document conversion specialist, who will generate a professional-looking PDF containing a title, introduction, data table, and key observations.
+
+* Navigate to the **Artifact Files** tab to locate the generated PDF output. 
+
+![Query and Report Prompt Test Output](./step8-test-output.png)
+
+* You can click Cancel on the workflow creation.
+
+**:rocket: We have now concluded Lab 4 :rocket:**
+
+**:tada: Congratulations on completing the Cloudera Agent Studio Hands on Lab! :tada:**
+
 
 
