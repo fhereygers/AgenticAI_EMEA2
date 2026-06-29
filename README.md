@@ -4,7 +4,7 @@ July 1st, 2026
 
 **WELCOME!**
 
-This document will be your exercise guide and will contain all information about the Labs, except for Links to the envirnoment and passwords.
+This document will be your exercise guide and will contain all information about the Labs, except for Links to the environment and passwords.
 
 These can be found in the chatbox of the meeting.
 
