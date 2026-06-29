@@ -246,6 +246,9 @@ You will see it break down the formula and perform a step-by-step calculation, r
 
 * You can click Cancel on the workflow creation, we will create a new workflow in the next lab.
 
+
+** DO NOT DEPLOY ANY WORKFLOWS, OUR RESOURCES ARE TO LIMITED**
+
 **:rocket: We have now concluded Lab 1 :rocket:**
 
 
