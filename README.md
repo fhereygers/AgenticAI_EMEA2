@@ -71,7 +71,6 @@ In the application, check the option _Don't show me this again_ and Click *Get S
 
 **:rocket: You are now set up and ready to start building Agents! :rocket:**
 
-# Lab 1
 
 # Lab 1 - Building a Financial Calculation Agent
 
@@ -221,7 +220,6 @@ You will see it break down the formula and perform a step-by-step calculation, r
 
 **:rocket: We have now concluded Lab 1 :rocket:**
 
-# Lab 2
 
 # Lab 2 - Integrating Tools in an Agent Workflow
 
@@ -369,7 +367,6 @@ You will see the agent "thinking", extracting values, and calling the tool to pe
 
 **:rocket: We have now concluded Lab 2 :rocket:**
 
-# Lab 3
 
 # Lab 3 - Multi-Agent Workflows with MCP
 
@@ -544,9 +541,6 @@ Input the specific credentials provided by your instructor
 
 **:rocket: We have now concluded Lab 3 :rocket:**
 
-
-
-# Lab 4
 
 # Lab 4 - Chat with Cloudera
 
