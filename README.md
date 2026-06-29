@@ -43,20 +43,12 @@ After login you should see the Cloudera tenant Home Screen. Click on **Cloudera 
 From the earlier step, you were give the workspace. Makes you pick the right workspace.
 Click into the desired workspace. (only 1 for this lab)
 
-**Step 1**: Login with the shared login URL and that should bring you to below screen as shown in step-2.
-
-**Step 2**: If there are any pop up’s for today’s lab, just dismiss them. You’ll see the following screen. Click on Cloudera AI. 
-
-
-![Home screen](./1homescreena.png)
-
-
-
 <br/>
-<img src="./1homescreena.png" width="90%">
- <br/>
+<img src="images/1homescreena.png" width="90%">
+<br/>
 
-**Step 3**: From the earlier step, you were given the workspace. Makes you pick the right workspace.
+
+From the earlier step, you were given the workspace. Makes you pick the right workspace.
 
 Click into the workspace based on your username. Please, do not select any other workbench as this could disturb the workload management.  
 
