@@ -77,11 +77,6 @@ You will see your project. Click into it.
 <img src="./3cproject.png" width="90%">
 <br/>
 
-![Cloudera AI Homepage](./cloudera_ai_home_page_workbench_selection.png)
-
-You will see your assigned Cloudera AI project. Click on the project name to open it.
-
-![Cloudera AI Project](./cloudera_ai_project.png)
 
 In the Project on the left navigation pane, click `AI Studios -> Agent Studio` to open Agent Studio application.
 
