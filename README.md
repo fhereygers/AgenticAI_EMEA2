@@ -394,6 +394,9 @@ You will see the agent "thinking", extracting values, and calling the tool to pe
 **:rocket: We have now concluded Lab 2 :rocket:**
 
 
+
+
+
 # Lab 3 - Chat with Cloudera
 
 In this final lab, you will build a multi-agent team that bridges the gap between raw data and professional reporting by integrating **Cloudera Data Warehouse** via the **Cloudera Iceberg MCP server**. By orchestrating specialized agents to inspect schemas, execute SQL queries via Apache Impala, and synthesize findings into polished documents, you'll master the full lifecycle of data-driven agentic workflows.
@@ -406,9 +409,9 @@ In this final lab, you will build a multi-agent team that bridges the gap betwee
 
 ## Requirements
 
-You must be logged into your assigned Cloudera AI project with the Agent Studio application launched. See [Lab 0 - Getting Started](../lab0/README.md) for setup instructions.
+You must be logged into your assigned Cloudera AI project with the Agent Studio application launched. 
 
-Your instructor will provide you with connection details to connect to Cloudera Data Warehouse service.
+Your instructor will provide you with connection details to connect to Cloudera Data Warehouse service. Check the chat box of the zoom meeting for this.
 
 ## Step-by-Step Guide
 
@@ -448,8 +451,8 @@ Your instructor will provide you with connection details to connect to Cloudera 
 }
 ```
 
-!!! note
-    You do not need to fill the credential placeholders at this point. We will do that during the Agent Workflow configuration.
+***!!! note
+    You do not need to fill the credential placeholders at this point. We will do that during the Agent Workflow configuration.***
 
 ![Cloudera MCP Server Configuration](./step1-cloudera-mcp-config.png)
 
