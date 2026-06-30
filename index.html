@@ -1,0 +1,1438 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="GOES">
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Agent Studio Hands on Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cloudera-agent-studio-hands-on-lab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Agent Studio Hands on Lab" class="md-header__button md-logo" aria-label="Agent Studio Hands on Lab" data-md-component="logo">
+      
+  <img src="assets/images/logo-cloudera-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agent Studio Hands on Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Agent Studio Hands on Lab" class="md-nav__button md-logo" aria-label="Agent Studio Hands on Lab" data-md-component="logo">
+      
+  <img src="assets/images/logo-cloudera-white.svg" alt="logo">
+
+    </a>
+    Agent Studio Hands on Lab
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cloudera-agent-studio-hands-on-lab">Cloudera Agent Studio Hands On Lab</h1>
+<p>July 1st, 2026</p>
+<p><strong>WELCOME!</strong></p>
+<p>This document will be your exercise guide and will contain all information about the Labs, except for Links to the environment and passwords.</p>
+<p>These can be found in the chatbox of the meeting.</p>
+<h1 id="before-you-begin">Before You Begin</h1>
+<p>This lab is instructor guided. Please follow along with your instructor. </p>
+<p>Every lab is independent. If you don’t manage to complete one it will not stop you completing the rest. If you need help please raise your hand and an instructor will assist you. </p>
+<p>To review this lab at home with click by click directions please check out our guided tour: https://app.getreprise.com/launch/W6G3ON6/</p>
+<p>You all have a dedicated user and project to work in. </p>
+<p><strong><em>Find your name and note down the workbench and user that have to use.</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>First Name with Family Name Initial</th>
+<th>Assigned Workbench</th>
+<th>Assigned User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abdelkoddous l</td>
+<td>aihol-ml-wb01</td>
+<td>user001</td>
+</tr>
+<tr>
+<td>Abderrahim S</td>
+<td>aihol-ml-wb01</td>
+<td>user002</td>
+</tr>
+<tr>
+<td>Adrián S A</td>
+<td>aihol-ml-wb01</td>
+<td>user003</td>
+</tr>
+<tr>
+<td>aidoune l</td>
+<td>aihol-ml-wb01</td>
+<td>user004</td>
+</tr>
+<tr>
+<td>ALBERTO V O</td>
+<td>aihol-ml-wb01</td>
+<td>user005</td>
+</tr>
+<tr>
+<td>Alejandro T F</td>
+<td>aihol-ml-wb01</td>
+<td>user006</td>
+</tr>
+<tr>
+<td>Amine R</td>
+<td>aihol-ml-wb01</td>
+<td>user007</td>
+</tr>
+<tr>
+<td>Ana B S I</td>
+<td>aihol-ml-wb01</td>
+<td>user008</td>
+</tr>
+<tr>
+<td>Areej A</td>
+<td>aihol-ml-wb01</td>
+<td>user009</td>
+</tr>
+<tr>
+<td>Aron B</td>
+<td>aihol-ml-wb01</td>
+<td>user010</td>
+</tr>
+<tr>
+<td>Blaz D</td>
+<td>aihol-ml-wb01</td>
+<td>user011</td>
+</tr>
+<tr>
+<td>Blaž W</td>
+<td>aihol-ml-wb01</td>
+<td>user012</td>
+</tr>
+<tr>
+<td>Bram S</td>
+<td>aihol-ml-wb01</td>
+<td>user013</td>
+</tr>
+<tr>
+<td>Cá V</td>
+<td>aihol-ml-wb01</td>
+<td>user014</td>
+</tr>
+<tr>
+<td>Can L</td>
+<td>aihol-ml-wb01</td>
+<td>user015</td>
+</tr>
+<tr>
+<td>Dame N</td>
+<td>aihol-ml-wb01</td>
+<td>user016</td>
+</tr>
+<tr>
+<td>Daniel A</td>
+<td>aihol-ml-wb01</td>
+<td>user017</td>
+</tr>
+<tr>
+<td>Daniel W</td>
+<td>aihol-ml-wb01</td>
+<td>user018</td>
+</tr>
+<tr>
+<td>David G M</td>
+<td>aihol-ml-wb01</td>
+<td>user019</td>
+</tr>
+<tr>
+<td>Dory K</td>
+<td>aihol-ml-wb01</td>
+<td>user020</td>
+</tr>
+<tr>
+<td>Egbe M S</td>
+<td>aihol-ml-wb01</td>
+<td>user021</td>
+</tr>
+<tr>
+<td>Emre  S</td>
+<td>aihol-ml-wb01</td>
+<td>user022</td>
+</tr>
+<tr>
+<td>Erkan O</td>
+<td>aihol-ml-wb01</td>
+<td>user023</td>
+</tr>
+<tr>
+<td>Farrukh B</td>
+<td>aihol-ml-wb01</td>
+<td>user024</td>
+</tr>
+<tr>
+<td>Fasih  A</td>
+<td>aihol-ml-wb01</td>
+<td>user025</td>
+</tr>
+<tr>
+<td>Flavien A</td>
+<td>aihol-ml-wb01</td>
+<td>user026</td>
+</tr>
+<tr>
+<td>FLURO A</td>
+<td>aihol-ml-wb01</td>
+<td>user027</td>
+</tr>
+<tr>
+<td>Francisco G P</td>
+<td>aihol-ml-wb01</td>
+<td>user028</td>
+</tr>
+<tr>
+<td>Francisco J B G</td>
+<td>aihol-ml-wb01</td>
+<td>user029</td>
+</tr>
+<tr>
+<td>Francois V</td>
+<td>aihol-ml-wb01</td>
+<td>user030</td>
+</tr>
+<tr>
+<td>Furkan A</td>
+<td>aihol-ml-wb02</td>
+<td>user031</td>
+</tr>
+<tr>
+<td>Govardhan R</td>
+<td>aihol-ml-wb02</td>
+<td>user032</td>
+</tr>
+<tr>
+<td>Gülsah A A</td>
+<td>aihol-ml-wb02</td>
+<td>user033</td>
+</tr>
+<tr>
+<td>Idir A</td>
+<td>aihol-ml-wb02</td>
+<td>user034</td>
+</tr>
+<tr>
+<td>Ignacio A</td>
+<td>aihol-ml-wb02</td>
+<td>user035</td>
+</tr>
+<tr>
+<td>Javier M</td>
+<td>aihol-ml-wb02</td>
+<td>user036</td>
+</tr>
+<tr>
+<td>Jayakrishna K</td>
+<td>aihol-ml-wb02</td>
+<td>user037</td>
+</tr>
+<tr>
+<td>Jenny (Eik L) L</td>
+<td>aihol-ml-wb02</td>
+<td>user038</td>
+</tr>
+<tr>
+<td>JESUS M F</td>
+<td>aihol-ml-wb02</td>
+<td>user039</td>
+</tr>
+<tr>
+<td>Jim  M</td>
+<td>aihol-ml-wb02</td>
+<td>user040</td>
+</tr>
+<tr>
+<td>Johannes N</td>
+<td>aihol-ml-wb02</td>
+<td>user041</td>
+</tr>
+<tr>
+<td>John  M</td>
+<td>aihol-ml-wb02</td>
+<td>user042</td>
+</tr>
+<tr>
+<td>Juan M C R</td>
+<td>aihol-ml-wb02</td>
+<td>user043</td>
+</tr>
+<tr>
+<td>Julio C D C</td>
+<td>aihol-ml-wb02</td>
+<td>user044</td>
+</tr>
+<tr>
+<td>Julio V</td>
+<td>aihol-ml-wb02</td>
+<td>user045</td>
+</tr>
+<tr>
+<td>Jure Kop</td>
+<td>aihol-ml-wb02</td>
+<td>user046</td>
+</tr>
+<tr>
+<td>Kai S</td>
+<td>aihol-ml-wb02</td>
+<td>user047</td>
+</tr>
+<tr>
+<td>Khomotjo  K</td>
+<td>aihol-ml-wb02</td>
+<td>user048</td>
+</tr>
+<tr>
+<td>Khutso  M</td>
+<td>aihol-ml-wb02</td>
+<td>user049</td>
+</tr>
+<tr>
+<td>Khutso  M</td>
+<td>aihol-ml-wb02</td>
+<td>user050</td>
+</tr>
+<tr>
+<td>Leontios O</td>
+<td>aihol-ml-wb02</td>
+<td>user051</td>
+</tr>
+<tr>
+<td>Lourdes G G</td>
+<td>aihol-ml-wb02</td>
+<td>user052</td>
+</tr>
+<tr>
+<td>Lucia H</td>
+<td>aihol-ml-wb02</td>
+<td>user053</td>
+</tr>
+<tr>
+<td>Lukas B</td>
+<td>aihol-ml-wb02</td>
+<td>user054</td>
+</tr>
+<tr>
+<td>Maja S</td>
+<td>aihol-ml-wb02</td>
+<td>user055</td>
+</tr>
+<tr>
+<td>Manuel A</td>
+<td>aihol-ml-wb02</td>
+<td>user056</td>
+</tr>
+<tr>
+<td>Marco A</td>
+<td>aihol-ml-wb02</td>
+<td>user057</td>
+</tr>
+<tr>
+<td>Markus G</td>
+<td>aihol-ml-wb02</td>
+<td>user058</td>
+</tr>
+<tr>
+<td>Marouane B</td>
+<td>aihol-ml-wb02</td>
+<td>user059</td>
+</tr>
+<tr>
+<td>Martin W</td>
+<td>aihol-ml-wb02</td>
+<td>user060</td>
+</tr>
+<tr>
+<td>Mathias P</td>
+<td>aihol-ml-wb03</td>
+<td>user061</td>
+</tr>
+<tr>
+<td>Maurice S</td>
+<td>aihol-ml-wb03</td>
+<td>user062</td>
+</tr>
+<tr>
+<td>Maxime D</td>
+<td>aihol-ml-wb03</td>
+<td>user063</td>
+</tr>
+<tr>
+<td>Mela M</td>
+<td>aihol-ml-wb03</td>
+<td>user064</td>
+</tr>
+<tr>
+<td>Miguel C R</td>
+<td>aihol-ml-wb03</td>
+<td>user065</td>
+</tr>
+<tr>
+<td>Mohamed A</td>
+<td>aihol-ml-wb03</td>
+<td>user066</td>
+</tr>
+<tr>
+<td>Mohammed F</td>
+<td>aihol-ml-wb03</td>
+<td>user067</td>
+</tr>
+<tr>
+<td>Mohit G</td>
+<td>aihol-ml-wb03</td>
+<td>user068</td>
+</tr>
+<tr>
+<td>Nicolas A</td>
+<td>aihol-ml-wb03</td>
+<td>user069</td>
+</tr>
+<tr>
+<td>Nida O</td>
+<td>aihol-ml-wb03</td>
+<td>user070</td>
+</tr>
+<tr>
+<td>Omar  A M</td>
+<td>aihol-ml-wb03</td>
+<td>user071</td>
+</tr>
+<tr>
+<td>Omar D</td>
+<td>aihol-ml-wb03</td>
+<td>user072</td>
+</tr>
+<tr>
+<td>Oussama L</td>
+<td>aihol-ml-wb03</td>
+<td>user073</td>
+</tr>
+<tr>
+<td>Parisa A</td>
+<td>aihol-ml-wb03</td>
+<td>user074</td>
+</tr>
+<tr>
+<td>Pascal F</td>
+<td>aihol-ml-wb03</td>
+<td>user075</td>
+</tr>
+<tr>
+<td>PAULA Á</td>
+<td>aihol-ml-wb03</td>
+<td>user076</td>
+</tr>
+<tr>
+<td>Philippe G</td>
+<td>aihol-ml-wb03</td>
+<td>user077</td>
+</tr>
+<tr>
+<td>Philippe P</td>
+<td>aihol-ml-wb03</td>
+<td>user078</td>
+</tr>
+<tr>
+<td>Pierrick B</td>
+<td>aihol-ml-wb03</td>
+<td>user079</td>
+</tr>
+<tr>
+<td>Rafael B</td>
+<td>aihol-ml-wb03</td>
+<td>user080</td>
+</tr>
+<tr>
+<td>Rodrigo A</td>
+<td>aihol-ml-wb03</td>
+<td>user081</td>
+</tr>
+<tr>
+<td>Rogelio FM</td>
+<td>aihol-ml-wb03</td>
+<td>user082</td>
+</tr>
+<tr>
+<td>Roi L S</td>
+<td>aihol-ml-wb03</td>
+<td>user083</td>
+</tr>
+<tr>
+<td>Rok D</td>
+<td>aihol-ml-wb03</td>
+<td>user084</td>
+</tr>
+<tr>
+<td>Roland R</td>
+<td>aihol-ml-wb03</td>
+<td>user085</td>
+</tr>
+<tr>
+<td>Roshna J</td>
+<td>aihol-ml-wb03</td>
+<td>user086</td>
+</tr>
+<tr>
+<td>Sayeed A</td>
+<td>aihol-ml-wb03</td>
+<td>user087</td>
+</tr>
+<tr>
+<td>Sergio B R</td>
+<td>aihol-ml-wb03</td>
+<td>user088</td>
+</tr>
+<tr>
+<td>Stanley G</td>
+<td>aihol-ml-wb03</td>
+<td>user089</td>
+</tr>
+<tr>
+<td>Stefan K</td>
+<td>aihol-ml-wb03</td>
+<td>user090</td>
+</tr>
+<tr>
+<td>Sven v d M</td>
+<td>aihol-ml-wb04</td>
+<td>user091</td>
+</tr>
+<tr>
+<td>Tobias K</td>
+<td>aihol-ml-wb04</td>
+<td>user092</td>
+</tr>
+<tr>
+<td>Ufuk E Y</td>
+<td>aihol-ml-wb04</td>
+<td>user093</td>
+</tr>
+<tr>
+<td>Veysel Y</td>
+<td>aihol-ml-wb04</td>
+<td>user094</td>
+</tr>
+<tr>
+<td>Victoire I</td>
+<td>aihol-ml-wb04</td>
+<td>user095</td>
+</tr>
+<tr>
+<td>Viswatez R</td>
+<td>aihol-ml-wb04</td>
+<td>user096</td>
+</tr>
+<tr>
+<td>Wah L</td>
+<td>aihol-ml-wb04</td>
+<td>user097</td>
+</tr>
+<tr>
+<td>Wouter K</td>
+<td>aihol-ml-wb04</td>
+<td>user098</td>
+</tr>
+<tr>
+<td>Yasser M</td>
+<td>aihol-ml-wb04</td>
+<td>user099</td>
+</tr>
+<tr>
+<td>Younes I</td>
+<td>aihol-ml-wb04</td>
+<td>user100</td>
+</tr>
+<tr>
+<td>Žak T</td>
+<td>aihol-ml-wb04</td>
+<td>user101</td>
+</tr>
+<tr>
+<td>Zakir S</td>
+<td>aihol-ml-wb04</td>
+<td>user102</td>
+</tr>
+</tbody>
+</table>
+<h1 id="getting-started">Getting Started</h1>
+<p><strong>Goals</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Login to Cloudera Control Plane</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Launch Cloudera AI Agent Studio Application</li>
+</ul>
+<h2 id="launching-agent-studio">Launching Agent Studio</h2>
+<p>Login to the Cloudera on cloud tenant using the details provided by your instructor.</p>
+<p>After login you should see the Cloudera tenant Home Screen. Click on <strong>Cloudera AI</strong></p>
+<p><a class="glightbox" href="images/cloudera_on_cloud_homepage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Cloudera on Cloud Tenant Homepage" src="images/cloudera_on_cloud_homepage.png" /></a></p>
+<p>From the earlier step, you were give the workbench. Please click the right workbench assigned to you.</p>
+<p>user 001 to user030 -&gt; aihol-ml-wb01</p>
+<p>user 031 to user060 -&gt; aihol-ml-wb02</p>
+<p>user061 to user090 -&gt; aihol-ml-wb03</p>
+<p>user091 to user120 -&gt; aihol-ml-wb04</p>
+<p><br/>
+<a class="glightbox" href="images/2workspace.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/2workspace.png" width="90%"></a>
+<br/></p>
+<p>Click <strong>view all projects</strong> and select scope to <strong>My Teams Projects</strong></p>
+<p><br/>
+<a class="glightbox" href="images/3ahomescreen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/3ahomescreen.png" width="90%"></a>
+<br/></p>
+<p><br/>
+<a class="glightbox" href="images/3bmyteam.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/3bmyteam.png" width="90%"></a>
+<br/>
+You will see your project. Click into it. </p>
+<p><br/>
+<a class="glightbox" href="images/3cproject.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/3cproject.png" width="90%"></a>
+<br/></p>
+<p>In the Project on the left navigation pane, click <code>AI Studios -&gt; Agent Studio</code> to open Agent Studio application.</p>
+<p><a class="glightbox" href="images/open_cloudera_agent_studio_menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Open Cloudera Agent Studio" src="images/open_cloudera_agent_studio_menu.png" /></a></p>
+<p>In the application, check the option <em>Don't show me this again</em> and Click <em>Get Started</em></p>
+<p><a class="glightbox" href="images/cloudera_agent_studio_get_started.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Open Cloudera Agent Studio" src="images/cloudera_agent_studio_get_started.png" /></a></p>
+<h3 id="checklist">Checklist</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Are you able to connect to the Cloudera Control Plane?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Are you able to navigate to and open your assigned Cloudera AI project?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Were you able to access the Agent Studio application?</li>
+</ul>
+<p><strong><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /> You are now set up and ready to start building Agents! <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /></strong></p>
+<h1 id="lab-1-building-a-financial-calculation-agent">Lab 1 - Building a Financial Calculation Agent</h1>
+<p>In this lab, you'll quickly deploy a financial modeling agent in Cloudera AI Agent Studio. You will assign complex tasks and observe how agents break down logic into step-by-step thoughts and actions. Finally, you'll explore the <em>"poets vs. quants"</em> phenomenon, witnessing firsthand the limitations of using standalone LLMs for precise mathematical computations.</p>
+<p><strong>Goals</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Build an agent in 10 mins</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create an agent and task</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> See limitations of using only agents</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>You must be logged into your assigned Cloudera AI project with the Agent Studio application launched. See the <a href="#getting-started">Getting Started</a> section for setup instructions.</p>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="step-1-create-a-new-workflow-in-agent-studio">Step 1: Create a New Workflow in Agent Studio</h3>
+<ul>
+<li>
+<p>Navigate to the Agent Studio for your assigned lab.</p>
+</li>
+<li>
+<p>On the Agent Studio home page, click <code>Create Workflow</code> to create a new workflow.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step1-create-workflow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Workflow" src="images/step1-create-workflow.png" /></a></p>
+<ul>
+<li>
+<p>Name it <code>Lab1: Calculate</code> in the workflow details.</p>
+</li>
+<li>
+<p>Click Create Workflow and proceed to the agent creation screen. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step1-workflow-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Workflow" src="images/step1-workflow-name.png" /></a></p>
+<h3 id="step-2-generate-agent-properties-with-ai">Step 2: Generate Agent Properties with AI</h3>
+<ul>
+<li>In the agent definition area, click <code>Create or Edit Agents</code>.</li>
+</ul>
+<p><a class="glightbox" href="images/step2-create-agents.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Agent" src="images/step2-create-agents.png" /></a></p>
+<ul>
+<li>Instead of manually typing the details, click the <code>Generate with AI</code> button to automatically create the agent's role, goal, and backstory.</li>
+</ul>
+<p><a class="glightbox" href="images/step2-generate-with-ai.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generate Agent with AI" src="images/step2-generate-with-ai.png" /></a></p>
+<ul>
+<li>Enter the following simple prompt into the AI generator: </li>
+</ul>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an expert at calculating financial formulas.
+</span></code></pre></div>
+<a class="glightbox" href="images/step2-enter-prompt.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Enter Prompt" src="images/step2-enter-prompt.png" /></a></p>
+<ul>
+<li>
+<p>Press the button to generate the properties. </p>
+</li>
+<li>
+<p>Review the generated suggestions for Role, Goal and Backstory.</p>
+</li>
+<li>
+<p>Click <code>Apply Suggestions</code> to populate the agent detail boxes.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step2-review-agent-properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Review Agent Properties" src="images/step2-review-agent-properties.png" /></a></p>
+<h3 id="step-3-finalize-the-agent">Step 3: Finalize the Agent</h3>
+<ul>
+<li>
+<p>Select the specific LLM model assigned by your instructor.</p>
+</li>
+<li>
+<p>Click <code>Create Agent</code>. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step3-finalize-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Agent Configuration" src="images/step3-finalize-agent.png" /></a></p>
+<ul>
+<li>
+<p>Then close the Create or Edit Agent dialog box. </p>
+</li>
+<li>
+<p>Then click <code>Save &amp; Next</code>.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step3-save-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Agent Configuration" src="images/step3-save-agent.png" /></a></p>
+<h3 id="step-4-add-the-calculation-task">Step 4: Add the Calculation Task</h3>
+<ul>
+<li>Click the <code>Add Task</code> button.</li>
+</ul>
+<p><a class="glightbox" href="images/step4-add-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Task" src="images/step4-add-task.png" /></a></p>
+<ul>
+<li>In the task description, enter the following prompt. Note the use of curly braces for variables. </li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>You calculate the NPV of a cashflow with the Future Value: {FV}, Time Period: {years}, and Discount Rate: {discount}. Show your work.
+</span></code></pre></div>
+<ul>
+<li>Fill out the Expected output field.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>The steps to calculate the NPV and the final result.
+</span></code></pre></div>
+<ul>
+<li>
+<p>In the agent dropdown, select the Financial Modeling Specialist agent you created in the previous step.</p>
+</li>
+<li>
+<p>Click <code>Add Task</code>, then click Save &amp; Next.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step4-define-task.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define Task" src="images/step4-define-task.png" /></a></p>
+<h3 id="step-5-review-configuration">Step 5: Review Configuration</h3>
+<ul>
+<li>
+<p>On the configuration screen, leave settings like tokens and temperature at their default values.</p>
+</li>
+<li>
+<p>Click Save and Next. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step5-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration" src="images/step5-configuration.png" /></a></p>
+<h3 id="step-6-test-the-workflow">Step 6: Test the Workflow</h3>
+<ul>
+<li>On the test screen, fill in the input variables as follows:</li>
+<li>Years: <code>4.5</code></li>
+<li>Discount: <code>6.5</code></li>
+<li>
+<p>Future Value: <code>5000</code></p>
+</li>
+<li>
+<p>Click Run Workflow.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step6-test-values.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Test Values" src="images/step6-test-values.png" /></a></p>
+<ul>
+<li>Observe the output generated by the agent. </li>
+</ul>
+<p>You will see it break down the formula and perform a step-by-step calculation, resulting in an approximate value like $3,700. </p>
+<p><a class="glightbox" href="images/step6-test-output.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Test Output" src="images/step6-test-output.png" /></a></p>
+<h3 id="step-7-validate-output-and-review-limitations">Step 7: Validate Output and Review Limitations</h3>
+<ul>
+<li>
+<p>Open the <a href="https://www.calculator.net/present-value-calculator.html">Present Value Calculator</a> tool in a new browser tab.</p>
+</li>
+<li>
+<p>Enter the same inputs:</p>
+</li>
+<li>Future Value = <code>5,000</code></li>
+<li>Number of Periods = <code>4.5</code></li>
+<li>
+<p>Interest Rate = <code>6.5</code></p>
+</li>
+<li>
+<p>Click <code>Calculate</code> and note the precise calculated present value: <code>$3,766.14</code>.</p>
+</li>
+<li>
+<p>Compare this true value with your agent's output. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step7-calculator-net-pv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Output from calculator.net" src="images/step7-calculator-net-pv.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This discrepancy between the value calculated by the Agent and the external calculator tool demonstrates that while LLMs are excellent at decomposing the problem, they struggle with accurate decimals and rounding, highlighting the limitation of using LLMs for exact math.</p>
+</div>
+<h3 id="step-8-review-agent-studio-logs">Step 8: Review Agent Studio Logs</h3>
+<ul>
+<li>Return to Agent Studio and review the Logs to see the execution flow (crew started, task kicked off, LLM call completed) all happening within the LLM environment. </li>
+</ul>
+<p><a class="glightbox" href="images/step8-review-logs-and-cancel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Review logs" src="images/step8-review-logs-and-cancel.png" /></a></p>
+<ul>
+<li>You can click Cancel on the workflow creation, we will create a new workflow in the next lab.</li>
+</ul>
+<p><strong>DO NOT DEPLOY ANY WORKFLOWS, OUR RESOURCES ARE TO LIMITED!</strong></p>
+<p><strong><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /> We have now concluded Lab 1 <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /></strong></p>
+<h1 id="lab-2-integrating-tools-in-an-agent-workflow">Lab 2 - Integrating Tools in an Agent Workflow</h1>
+<p>In this lab, you'll address the limitations of LLM-model-only Agents by using tools into your AI workflows. You will use calculator tools and observe how the LLM uses problem decomposition to delegate complex math for flawless precision.</p>
+<p><strong>Goals</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Build an AI Agent workflow with tool calling capability.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Enhance a tool to support custom calculator operations.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Observe LLM reasoning and tool delegation.</li>
+</ul>
+<h2 id="requirements_1">Requirements</h2>
+<p>You must be logged into your assigned Cloudera AI project with the Agent Studio application launched. See the <a href="#getting-started">Getting Started</a> section for setup instructions.</p>
+<h2 id="step-by-step-guide_1">Step-by-Step Guide</h2>
+<h3 id="step-1-create-a-workflow-from-a-template">Step 1: Create a Workflow from a Template</h3>
+<ul>
+<li>
+<p>Navigate to the Agent Studio for your assigned lab.</p>
+</li>
+<li>
+<p>On the Agent Studio home page, go to the <strong>Workflow templates</strong> area and click <code>View All</code>.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step1-view-workflow-templates.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View All Workflow Templates" src="images/step1-view-workflow-templates.png" /></a></p>
+<ul>
+<li>Find and click the <strong><em>left</em></strong> button for <code>Lab2: CalculateWithTools</code></li>
+</ul>
+<p><a class="glightbox" href="images/step1-select-workflow-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Lab 2 Workflow Template" src="images/step1-select-workflow-template.png" /></a></p>
+<ul>
+<li>This action will generate a draft workflow from the template as your starting point. </li>
+</ul>
+<h3 id="step-2-edit-the-agent-and-access-tools">Step 2: Edit the Agent and Access Tools</h3>
+<ul>
+<li>Locate the <strong>Financial Modeling Specialist</strong> that was created as part of the template and click Edit.</li>
+</ul>
+<p><a class="glightbox" href="images/step2-edit-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Agent" src="images/step2-edit-agent.png" /></a></p>
+<ul>
+<li>
+<p>In the <strong>Create or Edit Agent</strong> dialog, click the <code>Create or Edit Tools</code> button.</p>
+</li>
+<li>
+<p>Select the calculator tool from the menu. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step2-select-and-edit-tool.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Calculator Tool" src="images/step2-select-and-edit-tool.png" /></a></p>
+<h3 id="step-3-modify-toolpy-to-add-the-exponent-operator">Step 3: Modify <code>tool.py</code> to Add the Exponent Operator</h3>
+<ul>
+<li>Click Edit on the tool details to open the files menu.</li>
+</ul>
+<p><a class="glightbox" href="images/step3-edit-calculator-tool.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Calculator Tool" src="images/step3-edit-calculator-tool.png" /></a></p>
+<ul>
+<li>Select and edit the tool.py file.</li>
+</ul>
+<p><a class="glightbox" href="images/step3-edit-tool-py.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit tool.py" src="images/step3-edit-tool-py.png" /></a></p>
+<ul>
+<li>
+<p>Under the <code>ToolsParameters</code> class, locate the list of operators.</p>
+</li>
+<li>
+<p>Delete the comment hash (#) in front of the list of operators that includes the exponent symbol (the caret ^).</p>
+</li>
+<li>
+<p>Add a comment hash (#) to the old line of operators that does not include the exponent.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step3-edit-tool-source-code.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Calculator Tool" src="images/step3-edit-tool-source-code.png" /></a></p>
+<ul>
+<li>
+<p>The file auto-saves, but you can manually click <code>File &gt; Save</code> to confirm.</p>
+</li>
+<li>
+<p>Click the Back button on your browser to return to the file list. </p>
+</li>
+</ul>
+<h3 id="step-4-modify-calcpy-to-enable-the-exponent-math">Step 4: Modify <code>calc.py</code> to Enable the Exponent Math</h3>
+<ul>
+<li>Open and edit the <code>calc.py</code> file, which runs the actual calculation.</li>
+</ul>
+<p><a class="glightbox" href="images/step4-edit-calc-py.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit calc.py" src="images/step4-edit-calc-py.png" /></a></p>
+<ul>
+<li>
+<p>Locate the two lines of code that dictate the action for the exponent (^) operator.</p>
+</li>
+<li>
+<p>Uncomment these two lines by deleting their hashes (#), ensuring that your indentation remains correct.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step4-edit-calc-source-code.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Tool Source Code" src="images/step4-edit-calc-source-code.png" /></a></p>
+<ul>
+<li>
+<p>Click <code>File &gt; Save</code>, then close the file editor browser tab.</p>
+</li>
+<li>
+<p>Click the Refresh button in the Calculator Tool menu to apply your code changes. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step4-refresh-tool.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Refresh Tool" src="images/step4-refresh-tool.png" /></a></p>
+<h3 id="step-5-test-the-calculator-tool">Step 5: Test the Calculator Tool</h3>
+<ul>
+<li>
+<p>Click the Playground button to test the tool in isolation.</p>
+</li>
+<li>
+<p>In the tool parameters, input the following: </p>
+</li>
+<li>A = <code>2</code>, </li>
+<li>B = <code>2</code>, and </li>
+<li>
+<p>Operator = <code>^</code>.</p>
+</li>
+<li>
+<p>Click <code>Test Tool</code>. The tool will start, and the response should correctly output 4.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step5-tool-playground.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tool Testing via Playground" src="images/step5-tool-playground.png" /></a></p>
+<ul>
+<li>
+<p>Once verified, click <code>Save Tool</code> and then close the tool dialog.</p>
+</li>
+<li>
+<p>Similarly in the Create or Edit Agent dialog, click <code>Save Agent</code> and close the agent dialog.</p>
+</li>
+<li>
+<p>Click <code>Save &amp; Next</code> on the Add Agents menu.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step5-save-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save Agent" src="images/step5-save-agent.png" /></a></p>
+<h3 id="step-6-review-task-and-configuration">Step 6: Review Task and Configuration</h3>
+<ul>
+<li>
+<p>Review the pre-populated task (which already includes the task description, expected output, and variable placeholders). </p>
+</li>
+<li>
+<p>No changes are needed here. Click <code>Save &amp; Next</code>.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step6-save-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save Tasks" src="images/step6-save-tasks.png" /></a></p>
+<ul>
+<li>On the configuration screen, leave the tokens and temperature settings at their default values and click <code>Save &amp; Next</code>.</li>
+</ul>
+<p><a class="glightbox" href="images/step6-save-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save Configuration" src="images/step6-save-tasks.png" /></a></p>
+<h3 id="step-7-test-the-full-workflow">Step 7: Test the Full Workflow</h3>
+<ul>
+<li>On the test screen, input the same values used in Lab 1:</li>
+<li>Years: <code>4.5</code></li>
+<li>Discount: <code>6.5</code></li>
+<li>
+<p>Future Value: <code>5000</code></p>
+</li>
+<li>
+<p>Click Run Workflow.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step7-test-values.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Test Values" src="images/step7-test-values.png" /></a></p>
+<ul>
+<li>Observe the output generated by the workflow. </li>
+</ul>
+<p>You will see the agent "thinking", extracting values, and calling the tool to perform the calculations. Verify the final result is exactly <code>$3766.14</code>, matching the precise calculator.net output. </p>
+<p><a class="glightbox" href="images/step7-test-output.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Test Output" src="images/step7-test-output.png" /></a></p>
+<h3 id="step-8-review-the-execution-logs">Step 8: Review the Execution Logs</h3>
+<ul>
+<li>
+<p>Open the Logs tab and filter by <strong>Tool</strong> usage.</p>
+</li>
+<li>
+<p>Observe how the LLM first passed the inputs to the tool to calculate the exponent.</p>
+</li>
+<li>
+<p>Note how the tool passed the partial answer back to the LLM, which then called the tool a second time to perform the division calculation.</p>
+</li>
+<li>
+<p>Once satisfied, click Cancel on the workflow creation and return to the home screen (there is no need to deploy this lab).</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step8-review-logs-and-cancel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Review logs" src="images/step8-review-logs-and-cancel.png" /></a></p>
+<p><strong><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /> We have now concluded Lab 2 <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /></strong></p>
+<h1 id="lab-3-chat-with-cloudera">Lab 3 - Chat with Cloudera</h1>
+<p>In this final lab, you will build a multi-agent team that bridges the gap between raw data and professional reporting by integrating <strong>Cloudera Data Warehouse</strong> via the <strong>Cloudera Iceberg MCP server</strong>. By orchestrating specialized agents to inspect schemas, execute SQL queries via Apache Impala, and synthesize findings into polished documents, you'll master the full lifecycle of data-driven agentic workflows.</p>
+<p><strong>Goals</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Build collaborative multi-agent workflows.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use an MCP server to connect agents to Cloudera Data Warehouse.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Query data via Apache Impala and generate PDF reports.</li>
+</ul>
+<h2 id="requirements_2">Requirements</h2>
+<p>You must be logged into your assigned Cloudera AI project with the Agent Studio application launched. </p>
+<p>Your instructor will provide you with connection details to connect to Cloudera Data Warehouse service. Check the chat box of the zoom meeting for this.</p>
+<h2 id="step-by-step-guide_2">Step-by-Step Guide</h2>
+<h3 id="step-1-register-the-iceberg-mcp-server">Step 1: Register the Iceberg MCP Server</h3>
+<ul>
+<li>
+<p>Navigate to the Agent Studio for your assigned lab.</p>
+</li>
+<li>
+<p>On the Agent Studio home page, click <code>Tools Catalog</code> on the top navigation.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step1-open-tools-catalog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Open Tools Catalog" src="images/step1-open-tools-catalog.png" /></a></p>
+<ul>
+<li>Click on the <code>MCP Servers</code> tab and then click <code>Register</code> to add a new MCP Server.</li>
+</ul>
+<p><a class="glightbox" href="images/step1-register-mcp-server-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Register MCP Server Page" src="images/step1-register-mcp-server-page.png" /></a></p>
+<ul>
+<li>In the <strong>MCP Server Configuration</strong> textarea, delete the placeholder text and paste the below configuration to register the <a href="https://github.com/cloudera/iceberg-mcp-server?tab=readme-ov-file#option-1-direct-installation-from-github-recommended" target="_blank">Cloudera Iceberg MCP Server</a>. Then click <code>Register</code>.</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;iceberg-mcp-server&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="s2">&quot;--from&quot;</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="s2">&quot;git+https://github.com/cloudera/iceberg-mcp-server@main&quot;</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="s2">&quot;run-server&quot;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="p">],</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nt">&quot;IMPALA_HOST&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;coordinator-default-impala.example.com&quot;</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nt">&quot;IMPALA_PORT&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="nt">&quot;IMPALA_USER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="nt">&quot;IMPALA_PASSWORD&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="nt">&quot;IMPALA_DATABASE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong><em>!!! note
+    You do not need to fill the credential placeholders at this point. We will do that during the Agent Workflow configuration.</em></strong></p>
+<p><a class="glightbox" href="images/step1-cloudera-mcp-config.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Cloudera MCP Server Configuration" src="images/step1-cloudera-mcp-config.png" /></a></p>
+<ul>
+<li>Wait a few moment to allow verification of the Cloudera MCP server to complete (if it fails initially, try once more). It can take about 2-3 minutes. </li>
+</ul>
+<p><a class="glightbox" href="images/step1-cloudera-mcp-registered.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Verify MCP Server" src="images/step1-cloudera-mcp-registered.png" /></a></p>
+<h3 id="step-2-create-a-workflow-from-the-lab-4-template">Step 2: Create a Workflow from the Lab 4 Template</h3>
+<ul>
+<li>
+<p>Click <code>Agentic Workflows</code>  in the top navigation pane to return to the Agent Studio home page.</p>
+</li>
+<li>
+<p>On the Agent Studio home page, go to the <strong>Workflow templates</strong> area and click <code>View All</code>.</p>
+</li>
+<li>
+<p>Select the <code>Lab4: ChatWithCloudera</code> template to create a draft workflow.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step2-select-workflow-template.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Lab 4 Workflow Template" src="images/step2-select-workflow-template.png" /></a></p>
+<ul>
+<li>This will generate a draft workflow from the template as your starting point. </li>
+</ul>
+<h3 id="step-3-enable-conversational-dialogue-and-manager-agent">Step 3: Enable Conversational Dialogue and Manager Agent</h3>
+<ul>
+<li>
+<p>On the <strong>Add Agents</strong> screen, toggle on <strong>Is Conversational</strong>. This enables a chat interface that retains prior messages as context, allowing for iterative problem solving.</p>
+</li>
+<li>
+<p>Toggle on the <strong>Manager Agent</strong> setting, which will oversee the workflow and delegate tasks between your specialized agents. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step3-edit-agent-workflow-config.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Agent" src="images/step3-edit-agent-workflow-config.png" /></a></p>
+<h3 id="step-4-attach-the-mcp-server-to-the-query-specialist">Step 4: Attach the MCP Server to the Query Specialist</h3>
+<ul>
+<li>Locate the <strong>Data Warehouse Query Specialist</strong> agent and click edit.</li>
+</ul>
+<p><a class="glightbox" href="images/step4-edit-dw-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Edit Agent" src="images/step4-edit-dw-agent.png" /></a></p>
+<ul>
+<li>
+<p>In the agent editing dialog, click the <code>Add MCP Server to Agent</code> button.</p>
+</li>
+<li>
+<p>Click the <code>iceberg-mcp-server</code> to attach it to the Agent. Then click <code>Add MCP Server to Agent</code>.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step4-add-iceberg-mcp-server-to-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Iceberg MCP Server to Agent" src="images/step4-add-iceberg-mcp-server-to-agent.png" /></a></p>
+<ul>
+<li>
+<p>Close the <strong>Add or Edit MCPs</strong> dialog.</p>
+</li>
+<li>
+<p>Click <code>Save Agent</code> button. Then Close the <strong>Create or Edit Agent</strong> dialog.</p>
+</li>
+<li>
+<p>Click <code>Save &amp; Next</code> on the Add Agents menu.</p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step4-save-and-next-add-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save Agent Updates" src="images/step4-save-and-next-add-agent.png" /></a></p>
+<h3 id="step-5-review-task-and-configuration">Step 5: Review Task and Configuration</h3>
+<ul>
+<li>No changes are needed in the task configuration screen. Click <code>Save &amp; Next</code> to proceed.</li>
+</ul>
+<p><a class="glightbox" href="images/step5-save-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save Tasks" src="images/step5-save-tasks.png" /></a></p>
+<h3 id="step-6-configure-impala-connection-details">Step 6: Configure Impala Connection Details</h3>
+<ul>
+<li>
+<p>Proceed to the configuration screen where you will be prompted for Impala connection details.</p>
+</li>
+<li>
+<p>Input the details for the Cloudera Data Warehouse provided by your instructor:</p>
+</li>
+<li>
+<p>Impala host: (Enter the coordinator host URL provided)</p>
+</li>
+<li>Impala port: <code>443</code></li>
+<li>Impala user: (Your assigned username)</li>
+<li>Impala password: (Your assigned password)</li>
+<li>
+<p>Database: <code>default</code></p>
+</li>
+<li>
+<p>Click <code>Save &amp; Next</code>. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step6-configure-connection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Agent Configuration" src="images/step6-configure-connection.png" /></a></p>
+<h3 id="step-7-test-workflow-database-schema-exploration">Step 7: Test Workflow - Database Schema Exploration</h3>
+<ul>
+<li>In the chat composer UI, enter your first test prompt: </li>
+</ul>
+<div class="language-text highlight"><span class="filename">Database Schema Exploration Prompt</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>What sort of data do you have?
+</span></code></pre></div>
+<ul>
+<li>
+<p>Watch the execution flow as the data warehouse query specialist interrogates the schema and discovers the users and transactions tables.</p>
+</li>
+<li>
+<p>Observe the manager agent providing you with a synthesized summary of the database contents. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step7-test-output.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Database Schema Prompt Test Output" src="images/step7-test-output.png" /></a></p>
+<h3 id="step-8-test-workflow-complex-query-and-report-generation">Step 8: Test Workflow - Complex Query and Report Generation</h3>
+<ul>
+<li>Enter a second prompt to engage the full multi-agent team: </li>
+</ul>
+<div class="language-text highlight"><span class="filename">Query and Report Generation Prompt</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Create a report of the biggest transactions for the top 10 oldest users. Include the transaction amount, the user id, user gender, and the merchant city. Create a PDF with the report using your tools.
+</span></code></pre></div>
+<ul>
+<li>
+<p>Observe the data warehouse query specialist automatically linking the tables, generating the SQL, and modifying the query if it encounters an initial issue.</p>
+</li>
+<li>
+<p>Watch the workflow hand off the retrieved data to the document conversion specialist, who will generate a professional-looking PDF containing a title, introduction, data table, and key observations.</p>
+</li>
+<li>
+<p>Navigate to the <strong>Artifact Files</strong> tab to locate the generated PDF output. </p>
+</li>
+</ul>
+<p><a class="glightbox" href="images/step8-test-output.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Query and Report Prompt Test Output" src="images/step8-test-output.png" /></a></p>
+<ul>
+<li>You can click Cancel on the workflow creation.</li>
+</ul>
+<p><strong><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /> We have now concluded Lab 4 <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" title=":rocket:" /></strong></p>
+<p><strong><img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f389.svg" title=":tada:" /> Congratulations on completing the Cloudera Agent Studio Hands on Lab! <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f389.svg" title=":tada:" /></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Cloudera, Inc. All rights reserved.<br><a href="https://www.cloudera.com/legal/terms-and-conditions.html" target="_blank">Terms & Conditions | </a>  <a href="https://www.cloudera.com/legal/policies.html" target="_blank"> Privacy Policy and Data Policy</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "navigation.footer", "navigation.top"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="assets/javascripts/username-replacer.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
