@@ -271,7 +271,7 @@ You must be logged into your assigned Cloudera AI project with the Agent Studio 
 
 ![View All Workflow Templates](./step1-view-workflow-templates.png)
 
-* Find and click the button for `Lab2: CalculateWithTools`
+* Find and click the ***left*** button for `Lab2: CalculateWithTools`
 
 ![Select Lab 2 Workflow Template](./step1-select-workflow-template.png)
 
