@@ -456,7 +456,7 @@ Your instructor will provide you with connection details to connect to Cloudera 
 
 ![Cloudera MCP Server Configuration](./step1-cloudera-mcp-config.png)
 
-* Wait a few moment to allow verification of the Cloudera MCP server to complete (if it fails initially, try once more). 
+* Wait a few moment to allow verification of the Cloudera MCP server to complete (if it fails initially, try once more). It can take about 2-3 minutes. 
 
 ![Verify MCP Server](./step1-cloudera-mcp-registered.png)
 
