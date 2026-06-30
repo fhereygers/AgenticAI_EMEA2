@@ -17,6 +17,115 @@ Every lab is independent. If you don’t manage to complete one it will not stop
 
 To review this lab at home with click by click directions please check out our guided tour: https://app.getreprise.com/launch/W6G3ON6/
 
+You all have a dedicated user and project to work in. Find your name and note down the workbench and user that have to use.
+
+
+|First Name with Family Name Initial|Assigned Workbench|Assigned User|
+|-----------------------------------|------------------|-------------|
+|Abdelkoddous l                     |aihol-ml-wb01     |user001      |
+|Abderrahim S                       |aihol-ml-wb01     |user002      |
+|Adrián S A                         |aihol-ml-wb01     |user003      |
+|aidoune l                          |aihol-ml-wb01     |user004      |
+|ALBERTO V O                        |aihol-ml-wb01     |user005      |
+|Alejandro T F                      |aihol-ml-wb01     |user006      |
+|Amine R                            |aihol-ml-wb01     |user007      |
+|Ana B S I                          |aihol-ml-wb01     |user008      |
+|Areej A                            |aihol-ml-wb01     |user009      |
+|Aron B                             |aihol-ml-wb01     |user010      |
+|Blaz D                             |aihol-ml-wb01     |user011      |
+|Blaž W                             |aihol-ml-wb01     |user012      |
+|Bram S                             |aihol-ml-wb01     |user013      |
+|Cá V                               |aihol-ml-wb01     |user014      |
+|Can L                              |aihol-ml-wb01     |user015      |
+|Dame N                             |aihol-ml-wb01     |user016      |
+|Daniel A                           |aihol-ml-wb01     |user017      |
+|Daniel W                           |aihol-ml-wb01     |user018      |
+|David G M                          |aihol-ml-wb01     |user019      |
+|Dory K                             |aihol-ml-wb01     |user020      |
+|Egbe M S                           |aihol-ml-wb01     |user021      |
+|Emre  S                            |aihol-ml-wb01     |user022      |
+|Erkan O                            |aihol-ml-wb01     |user023      |
+|Farrukh B                          |aihol-ml-wb01     |user024      |
+|Fasih  A                           |aihol-ml-wb01     |user025      |
+|Flavien A                          |aihol-ml-wb01     |user026      |
+|FLURO A                            |aihol-ml-wb01     |user027      |
+|Francisco G P                      |aihol-ml-wb01     |user028      |
+|Francisco J B G                    |aihol-ml-wb01     |user029      |
+|Francois V                         |aihol-ml-wb01     |user030      |
+|Furkan A                           |aihol-ml-wb02     |user031      |
+|Govardhan R                        |aihol-ml-wb02     |user032      |
+|Gülsah A A                         |aihol-ml-wb02     |user033      |
+|Idir A                             |aihol-ml-wb02     |user034      |
+|Ignacio A                          |aihol-ml-wb02     |user035      |
+|Javier M                           |aihol-ml-wb02     |user036      |
+|Jayakrishna K                      |aihol-ml-wb02     |user037      |
+|Jenny (Eik L) L                    |aihol-ml-wb02     |user038      |
+|JESUS M F                          |aihol-ml-wb02     |user039      |
+|Jim  M                             |aihol-ml-wb02     |user040      |
+|Johannes N                         |aihol-ml-wb02     |user041      |
+|John  M                            |aihol-ml-wb02     |user042      |
+|Juan M C R                         |aihol-ml-wb02     |user043      |
+|Julio C D C                        |aihol-ml-wb02     |user044      |
+|Julio V                            |aihol-ml-wb02     |user045      |
+|Jure Kop                           |aihol-ml-wb02     |user046      |
+|Kai S                              |aihol-ml-wb02     |user047      |
+|Khomotjo  K                        |aihol-ml-wb02     |user048      |
+|Khutso  M                          |aihol-ml-wb02     |user049      |
+|Khutso  M                          |aihol-ml-wb02     |user050      |
+|Leontios O                         |aihol-ml-wb02     |user051      |
+|Lourdes G G                        |aihol-ml-wb02     |user052      |
+|Lucia H                            |aihol-ml-wb02     |user053      |
+|Lukas B                            |aihol-ml-wb02     |user054      |
+|Maja S                             |aihol-ml-wb02     |user055      |
+|Manuel A                           |aihol-ml-wb02     |user056      |
+|Marco A                            |aihol-ml-wb02     |user057      |
+|Markus G                           |aihol-ml-wb02     |user058      |
+|Marouane B                         |aihol-ml-wb02     |user059      |
+|Martin W                           |aihol-ml-wb02     |user060      |
+|Mathias P                          |aihol-ml-wb03     |user061      |
+|Maurice S                          |aihol-ml-wb03     |user062      |
+|Maxime D                           |aihol-ml-wb03     |user063      |
+|Mela M                             |aihol-ml-wb03     |user064      |
+|Miguel C R                         |aihol-ml-wb03     |user065      |
+|Mohamed A                          |aihol-ml-wb03     |user066      |
+|Mohammed F                         |aihol-ml-wb03     |user067      |
+|Mohit G                            |aihol-ml-wb03     |user068      |
+|Nicolas A                          |aihol-ml-wb03     |user069      |
+|Nida O                             |aihol-ml-wb03     |user070      |
+|Omar  A M                          |aihol-ml-wb03     |user071      |
+|Omar D                             |aihol-ml-wb03     |user072      |
+|Oussama L                          |aihol-ml-wb03     |user073      |
+|Parisa A                           |aihol-ml-wb03     |user074      |
+|Pascal F                           |aihol-ml-wb03     |user075      |
+|PAULA Á                            |aihol-ml-wb03     |user076      |
+|Philippe G                         |aihol-ml-wb03     |user077      |
+|Philippe P                         |aihol-ml-wb03     |user078      |
+|Pierrick B                         |aihol-ml-wb03     |user079      |
+|Rafael B                           |aihol-ml-wb03     |user080      |
+|Rodrigo A                          |aihol-ml-wb03     |user081      |
+|Rogelio FM                         |aihol-ml-wb03     |user082      |
+|Roi L S                            |aihol-ml-wb03     |user083      |
+|Rok D                              |aihol-ml-wb03     |user084      |
+|Roland R                           |aihol-ml-wb03     |user085      |
+|Roshna J                           |aihol-ml-wb03     |user086      |
+|Sayeed A                           |aihol-ml-wb03     |user087      |
+|Sergio B R                         |aihol-ml-wb03     |user088      |
+|Stanley G                          |aihol-ml-wb03     |user089      |
+|Stefan K                           |aihol-ml-wb03     |user090      |
+|Sven v d M                         |aihol-ml-wb04     |user091      |
+|Tobias K                           |aihol-ml-wb04     |user092      |
+|Ufuk E Y                           |aihol-ml-wb04     |user093      |
+|Veysel Y                           |aihol-ml-wb04     |user094      |
+|Victoire I                         |aihol-ml-wb04     |user095      |
+|Viswatez R                         |aihol-ml-wb04     |user096      |
+|Wah L                              |aihol-ml-wb04     |user097      |
+|Wouter K                           |aihol-ml-wb04     |user098      |
+|Yasser M                           |aihol-ml-wb04     |user099      |
+|Younes I                           |aihol-ml-wb04     |user100      |
+|Žak T                              |aihol-ml-wb04     |user101      |
+|Zakir S                            |aihol-ml-wb04     |user102      |
+
+
 
 # Getting Started
 
