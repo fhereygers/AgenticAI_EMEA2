@@ -17,7 +17,9 @@ Every lab is independent. If you don’t manage to complete one it will not stop
 
 To review this lab at home with click by click directions please check out our guided tour: https://app.getreprise.com/launch/W6G3ON6/
 
-You all have a dedicated user and project to work in. Find your name and note down the workbench and user that have to use.
+You all have a dedicated user and project to work in. 
+
+***Find your name and note down the workbench and user that have to use.***
 
 
 |First Name with Family Name Initial|Assigned Workbench|Assigned User|
@@ -142,13 +144,8 @@ After login you should see the Cloudera tenant Home Screen. Click on **Cloudera 
 
 ![Cloudera on Cloud Tenant Homepage](./cloudera_on_cloud_homepage.png)
 
-From the earlier step, you were give the workspace. Makes you pick the right workspace.
-Click into the desired workspace. (only 1 for this lab)
+From the earlier step, you were give the workbench. Please click the right workbench assigned to you.
 
-
-From the earlier step, you were given the workspace. Makes you pick the right workspace.
-
-Click into the workspace based on your username. Please, do not select any other workbench as this could disturb the workload management.  
 
 user 001 to user030 -> aihol-ml-wb01
 
